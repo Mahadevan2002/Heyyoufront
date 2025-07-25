@@ -17,22 +17,24 @@ const App = () => {
     });
   }, []);
 
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const registerUser = async () => {
     if (!name || latitude === null || longitude === null) {
       alert("Missing name or location");
       return;
     }
-    const { data } = await axios.post("http://peaceful-happiness-production.up.railway.app/api/register", {
+    const { data } = await axios.post("${API_URL}/api/register", {
       name, latitude, longitude
     });
     setRegistered(true);
     setMyId(data.id);
   };
-
+ 
   useEffect(() => {
     const interval = setInterval(() => {
       if (registered) {
-        axios.get("http://peaceful-happiness-production.up.railway.app/api/nearby-users", {
+        axios.get("${API_URL}/api/nearby-users", {
           params: { latitude, longitude }
         })
         .then(res => setNearbyUsers(res.data));
