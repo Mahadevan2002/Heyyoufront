@@ -1,0 +1,86 @@
+/* Reset default padding and margin */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f5f5f5;
+  color: #333; /* Ensure visible text */
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* User list styling */
+.user-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.user-list li {
+  padding: 10px 15px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  color: #000; /* Make text visible */
+}
+
+/* Status dot */
+.status-dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.online-dot {
+  background-color: green;
+}
+
+.offline-dot {
+  background-color: red;
+}
+
+/* Optional: Label for new users */
+.new-label {
+  color: green;
+  font-weight: bold;
+  margin-left: auto;
+}
